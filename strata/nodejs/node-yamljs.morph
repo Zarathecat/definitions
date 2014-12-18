@@ -1,0 +1,9 @@
+name: node-yamljs
+kind: chunk
+build-system: manual
+install-commands:
+  - mkdir -p "$DESTDIR"/"$PREFIX"/lib/node_modules/yamljs
+  - cp -a * "$DESTDIR"/"$PREFIX"/lib/node_modules/yamljs
+  - npm config set prefix "$DESTDIR"/"$PREFIX"
+  - npm config set unsafe-perm true
+  - cd "$DESTDIR"/"$PREFIX" && npm build --global --verbose "$DESTDIR"/"$PREFIX"/lib/node_modules/yamljs
