@@ -9,3 +9,15 @@ chunks:
   ref: cc56c62ed879ad4f93b1fdab3235c43e60f48b7e
   unpetrify-ref: v0.10.26
   build-depends: []
+- name: node-async
+  morph: strata/nodejs/node-async.morph
+  repo: https://github.com/caolan/async
+  ref: master
+  build-depends:
+    - node
+- name: node-yamljs
+  morph: strata/nodejs/node-yamljs.morph
+  repo: https://github.com/jeremyfa/yaml.js
+  ref: master
+  build-depends:
+    - node
