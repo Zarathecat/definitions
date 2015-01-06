@@ -1,0 +1,9 @@
+name: node-util
+kind: chunk
+build-system: manual
+install-commands:
+  - mkdir -p "$DESTDIR"/"$PREFIX"/lib/node_modules/util
+  - cp -a * "$DESTDIR"/"$PREFIX"/lib/node_modules/util
+  - npm config set prefix "$DESTDIR"/"$PREFIX"
+  - npm config set unsafe-perm true
+  - cd "$DESTDIR"/"$PREFIX" && npm build --global --verbose "$DESTDIR"/"$PREFIX"/lib/node_modules/util

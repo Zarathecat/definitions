@@ -21,3 +21,21 @@ chunks:
   ref: master
   build-depends:
     - node
+- name: node-semver
+  morph: strata/nodejs/node-semver.morph
+  repo: https://github.com/npm/node-semver
+  ref: master
+  build-depends:
+    - node
+- name: node-npm
+  morph: strata/nodejs/node-npm.morph
+  repo: https://github.com/npm/npm
+  ref: master
+  build-depends:
+    - node
+- name: node-util
+  morph: strata/nodejs/node-util.morph
+  repo: https://github.com/defunctzombie/node-util
+  ref: master
+  build-depends:
+    - node
